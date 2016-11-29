@@ -8,6 +8,9 @@ var d10 = d10();
 var d20 = d20();
 var dSpecial = customDie();
 
+// variable to hold sign in info from google sign in
+var googleInfo = {};
+
 // object of ajax queries
 var mtgQuery = {
     urls: {
@@ -52,7 +55,6 @@ $(".button-collapse").sideNav();
 
 // ---------- GLOBAL VARIABLES ----------
 var searchTerm;
-
 var arrayOfResults = [];
 
 // ---------- LOCATIONS ----------
@@ -63,6 +65,9 @@ var cardListOutput = $("#cardListOutput");
 var content = $("#content");
 var addPlayer = $("#addPlayer");
 var logo = $("#logo");
+var profileImage = $("#profileImage");
+var profileName = $("#profileName");
+var profileEmail = $("#profileEmail");
 
 // ---------- CLICKLISTENERS ----------
 submitButton.on("click", function (e) {
@@ -83,14 +88,27 @@ logo.on("click", function() {
 
 // ---------- FUNCTIONS ----------
 
-onSignIn();
-
 function onSignIn(googleUser) {
   var profile = googleUser.getBasicProfile();
-  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-  console.log('Name: ' + profile.getName());
-  console.log('Image URL: ' + profile.getImageUrl());
-  console.log('Email: ' + profile.getEmail());
+  var id = profile.getId(); // Do not send to your backend! Use an ID token instead.
+  var name = profile.getName();
+  var image = profile.getImageUrl();
+  var email = profile.getEmail();
+
+  googleInfo = {
+      id: id,
+      name: name,
+      image: image,
+      email: email
+  }
+
+  setProfileInformation(googleInfo);
+}
+
+function setProfileInformation(profile) {
+    profileImage.attr("src", profile.image);
+    profileName.text(profile.name);
+    profileEmail.text(profile.email);
 }
 
 function search() {
