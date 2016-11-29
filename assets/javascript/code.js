@@ -46,9 +46,13 @@ var mtgQuery = {
 
 }
 
+// ---------- INITIATORS ----------
+var database = firebase.database();
+$(".button-collapse").sideNav();
+
 // ---------- GLOBAL VARIABLES ----------
 var searchTerm;
-var database = firebase.database();
+
 var arrayOfResults = [];
 
 // ---------- LOCATIONS ----------
@@ -58,18 +62,23 @@ var output = $("#output");
 var cardListOutput = $("#cardListOutput");
 var content = $("#content");
 var addPlayer = $("#addPlayer");
+var logo = $("#logo");
 
 // ---------- CLICKLISTENERS ----------
 submitButton.on("click", function (e) {
     e.preventDefault();
     searchTerm = searchBox.val().trim();
     console.log(searchTerm);
-    search();
+    //search();
     clearSearchBox();
 });
 
 addPlayer.on("click", function () {
-    createPlayerRow();
+    createDeckCard();
+});
+
+logo.on("click", function() {
+      $('.button-collapse').sideNav('show');
 });
 
 // ---------- FUNCTIONS ----------
@@ -118,7 +127,7 @@ function diceRoll(func) {
 
 // ========== CLICKLISTENERS ==========
 
-$(document).on("click", ".card", addCardToDeck);
+//$(document).on("click", ".card", addCardToDeck);
 
 $(".dropdown-button").dropdown();
 
@@ -167,12 +176,13 @@ function createPlayerRow(playerObject) {
     var colS3 = $("<div class=\"col s3\">");
     row.append(colS3);
 
-    var button = $("<button>");
+    var button = $("<button class=\"waves-effect waves-teal btn\">");
     button.text("-1");
     button.val("-1");
+    button.css("width", "5px");
     colS3.append(button);
 
-    button = $("<button>");
+    button = $("<button class=\"waves-effect waves-teal btn\">");
     button.text("-5");
     button.val("-5");
     colS3.append(button);
@@ -181,12 +191,12 @@ function createPlayerRow(playerObject) {
     span.text("40");
     colS3.append(span);
 
-    button = $("<button>");
+    button = $("<button class=\"waves-effect waves-teal btn\">");
     button.text("+5");
     button.val("5");
     colS3.append(button);
 
-    button = $("<button>");
+    button = $("<button class=\"waves-effect waves-teal btn\">");
     button.text("+1");
     button.val("1");
     colS3.append(button);
@@ -217,4 +227,53 @@ function createPlayerRow(playerObject) {
     p.text("Feldon");
     colS2.append(p);
 
+}
+
+// this function creates a card to be used in creating a deck placeholder
+// todo control the size of the image created
+function createDeckCard(deck) {
+    var divCard = $("<div class=\"card medium\">");
+    divCard.width("300px");
+    content.append(divCard);
+
+    var divCardImage = $("<div class=\"card-image waves-effect waves-block waves-light\">");
+    divCard.append(divCardImage);
+
+    var img = $("<img class=\"activator\">");
+    img.attr("src", "assets/images/feldon.jpg");
+    divCardImage.append(img);
+
+    var divCardContent = $("<div class=\"card-content\">");
+    divCard.append(divCardContent);
+
+    var span = $("<span class=\"card-title activator grey-text text-darken-4\">");
+    span.text("Deck Title on Card Side");
+    divCardContent.append(span);
+
+    var i = $("<i class=\"material-icons right\">");
+    i.text("more_vert");
+    span.append(i);
+
+    var p = $("<p>");
+    span.append(p);
+
+    var a = $("<a>");
+    a.attr("href", "#");
+    a.text("Link to the deck list");
+    p.append(a);
+
+    var divCardReveal = $("<div class=\"card-reveal\">");
+    divCard.append(divCardReveal);
+
+    var spanCardTitle = $("<span class=\"card-title grey-text text-darken-4\">");
+    spanCardTitle.text("Deck Name on Reveal Side");
+    divCardReveal.append(spanCardTitle);
+
+    i = $("<i class=\"material-icons right\">");
+    i.text("close");
+    spanCardTitle.append(i);
+
+    p = $("<p>");
+    p.text("Here is some more information about this product that is only revealed once clicked on.");
+    divCardReveal.append(p);
 }

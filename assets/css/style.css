@@ -1,15 +1,6 @@
 body {
-	background-color: black;
+  background-color: black;
   color: white;
-}
-
-form {
-	background-color: white;
-	padding: 1%;
-}
-
-img {
-	margin: 1%;
 }
 
 .container {
@@ -33,13 +24,38 @@ img {
   transform: scale(1.1);
 }
 
-.cardList {
-  color: white;
-}
-
 #stickyNavBar {
   position: fixed;
   top: 0;
   z-index: 10;
   padding: 0 20px;
+}
+
+.tinypic {
+  height: 125px;
+}
+
+.btn {
+  padding: 0 15px;
+  margin: auto 5px;
+}
+
+.name {
+  font-size: 25px;
+  margin: 0 10px;
+}
+
+.lifeTotal {
+  font-size: 50px;
+  margin: 10px;
+}
+
+.collapsible-header {
+  padding: 0;
+}
+
+.dice {
+  width: 24px;
+  height: 24px;
+  display: inline;
 }

@@ -19,21 +19,42 @@
 <body>
     <nav id="stickyNavBar">
         <div class="nav-wrapper">
-            <a href="#" class="brand-logo">MTG Helper</a>
+            <a id="logo" class="brand-logo">MTG</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="game.html">Game Helper</a></li>
                 <li><a href="badges.html">Deck Helper</a></li>
                 <li><a href="collapsible.html">Stories</a></li>
             </ul>
-            <ul id="dropDown" class="dropdown-content">
-                <li id="coinFlip">Coin Flip</li>
-                <li id="d6Roll">D6</li>
-                <li id="d10Roll">D10</li>
-                <li id="d20Roll">D20</li>
-                <li id="d?Roll">D?</li>
-            </ul>
         </div>
     </nav>
+    <ul id="slide-out" class="side-nav">
+        <li>
+            <div class="userView">
+                <div class="background">
+                    <img src="images/office.jpg">
+                </div>
+                <a href="#!user"><img class="circle" src="images/yuna.jpg"></a>
+                <a href="#!name"><span class="white-text name">John Doe</span></a>
+                <a href="#!email"><span class="white-text email">jdandturk@gmail.com</span></a>
+            </div>
+        </li>
+        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
+        <li><a href="#!">Second Link</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Tools</a></li>
+        <li>
+            <a id="coinFlip" class="waves-effect"><img class="dice" src="assets/images/dice/coin-darkgrey.svg" alt="coin image">Coin Flip</a>
+        </li>
+        <li>
+            <a id="D6" class="waves-effect"><img class="dice" src="assets/images/dice/d6perceptive-darkgrey.svg" alt="six-sided dice">D6</a>
+        </li>
+        <li>
+        <a id="D20" class="waves-effect"><img class="dice" src="assets/images/dice/d20-darkgrey.svg" alt="twenty-sided dice">D20</a>
+        </li>
+    </ul>
+    <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
     <div class="container">
         <br>
         <div class="row">
@@ -78,8 +99,8 @@
     <!-- Alertify -->
     <script src="assets/javascript/alertify.js"></script>
     <!-- custom javascript -->
-    <script type="text/javascript" src="assets/javascript/code.js"></script>
     <script type="text/javascript" src="assets/javascript/tools.js"></script>
+    <script type="text/javascript" src="assets/javascript/code.js"></script>
 </body>
 
 </html>
