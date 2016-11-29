@@ -4,21 +4,24 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- necessary meta for Google Sign In -->
     <meta name="google-signin-client_id" content="1035011540407-0t8uan7semme0s2cq7kph8rokgkkjb0f.apps.googleusercontent.com">
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <title>MTG</title>
+    <title>Magic the Console</title>
     <!-- google icons (like fontawesome) -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- alertify css -->
+    <link rel="stylesheet" href="assets/css/alertify.css">
     <!-- materialize Compiled and minified CSS -->
-    <!-- CSS -->
-    <link rel="stylesheet" href="assets/css/alertify.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <!-- custom style sheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- script for google sign in -->
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
+    <!-- navbar -->
     <nav id="stickyNavBar">
         <div class="nav-wrapper">
             <a id="logo" class="brand-logo">MTG</a>
@@ -29,6 +32,7 @@
             </ul>
         </div>
     </nav>
+    <!-- sidebar -->
     <ul id="slide-out" class="side-nav">
         <li>
             <div class="userView">
@@ -53,10 +57,11 @@
             <a id="D6" class="waves-effect"><img class="dice" src="assets/images/dice/d6perceptive-darkgrey.svg" alt="six-sided dice">D6</a>
         </li>
         <li>
-        <a id="D20" class="waves-effect"><img class="dice" src="assets/images/dice/d20-darkgrey.svg" alt="twenty-sided dice">D20</a>
+            <a id="D20" class="waves-effect"><img class="dice" src="assets/images/dice/d20-darkgrey.svg" alt="twenty-sided dice">D20</a>
         </li>
     </ul>
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+    <!-- main content area -->
     <div class="container">
         <br>
         <div class="row">
