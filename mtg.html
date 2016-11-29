@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id" content="1035011540407-0t8uan7semme0s2cq7kph8rokgkkjb0f.apps.googleusercontent.com">
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
     <title>MTG</title>
     <!-- google icons (like fontawesome) -->
@@ -14,6 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
     <!-- custom style sheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 
 <body>
@@ -58,6 +60,7 @@
     <div class="container">
         <br>
         <div class="row">
+            <div class="g-signin2" data-onsuccess="onSignIn"><button>Sign In</button></div>
             <div class="col s1"></div>
             <div class="col s10">
                 <form>
