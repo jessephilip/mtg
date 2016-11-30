@@ -24,13 +24,12 @@
     <!-- navbar -->
     <nav id="stickyNavBar">
         <div class="nav-wrapper">
-            <a id="logo" class="brand-logo">MTG</a>
+            <a id="logo" class="brand-logo">Magic the Console</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="game.html">Game Helper</a></li>
-                <li><a href="badges.html">Deck Helper</a></li>
-                <li><a href="collapsible.html">Stories</a></li>
+                <li id="watchers"><i class="material-icons">visibility</i></li>
                 <li>
-                    <a href=""><img class="circle profileImage"></a>
+                    <img src="http://placehold.it/30x30" alt="profile image" class="circle profileImage">
+                </li>
             </ul>
         </div>
     </nav>
@@ -41,13 +40,20 @@
                 <div class="background">
                     <img src="assets/images/mtgbackground.jpg">
                 </div>
-                <a href="#!user"><img class="circle profileImage" src=""></a>
+                <a href="#!user"><img class="circle profileImage" src="http://placehold.it/50x50" alt="profile image"></a>
                 <a href="#!name"><span id="profileName" class="white-text name">John Doe</span></a>
-                <a href="#!email"><span id="profileEmail" class="white-text email">jdandturk@gmail.com</span></a>
+                <a href="#!email"><span id="profileEmail" class="white-text email">example@gmail.com</span></a>
             </div>
         </li>
-        <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>
-        <li><a href="#!">Second Link</a></li>
+        <li><a class="subheader">Play</a></li>
+        <li><a><i class="material-icons">cloud</i>Host Game</a></li>
+        <li><a><i class="material-icons">group_work</i>Join Game</a></li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Build</a></li>
+        <li><a><i class="material-icons">description</i>Create Deck</a></li>
+        <li><a><i class="material-icons">description</i>Create Points</a></li>
         <li>
             <div class="divider"></div>
         </li>
@@ -56,42 +62,28 @@
             <a id="coinFlip" class="waves-effect"><img class="dice" src="assets/images/dice/coin-darkgrey.svg" alt="coin image">Coin Flip</a>
         </li>
         <li>
-            <a id="D6" class="waves-effect"><img class="dice" src="assets/images/dice/d6perceptive-darkgrey.svg" alt="six-sided dice">D6</a>
+            <a id="d6" class="waves-effect"><img class="dice" src="assets/images/dice/d6perceptive-darkgrey.svg" alt="six-sided dice">D6</a>
         </li>
         <li>
-            <a id="D20" class="waves-effect"><img class="dice" src="assets/images/dice/d20-darkgrey.svg" alt="twenty-sided dice">D20</a>
+            <a id="d20" class="waves-effect"><img class="dice" src="assets/images/dice/d20-darkgrey.svg" alt="twenty-sided dice">D20</a>
         </li>
+        <li>
+            <div class="divider"></div>
+        </li>
+        <li><a class="subheader">Settings</a></li>
+        <li><a><i class="material-icons">perm_identity</i>Account Settings</a></li>
+        <li><a><i class="material-icons">settings</i>Site Settings</a></li>
     </ul>
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
     <!-- main content area -->
-    <section id="search" class="container">
-        <br>
-        <div class="row">
-            <div class="g-signin2" data-onsuccess="onSignIn">
-                <button>Sign In</button>
-            </div>
-            <div><p id="watchers"></p></div>
-            <div class="col s1"></div>
-            <div class="col s10">
-                <form>
-                    <div class="input-field">
-                        <i class="material-icons prefix">search</i>
-                        <input id="searchBox" type="text" name="search" class="validate">
-                        <label for="searchBox">search</label>
-                        <button id="submitButton" type="submit" class="btn waves-effect waves-light">Submit <i class="material-icons right">send</i></button>
-                    </div>
-                </form>
-            </div>
-            <div id="cardListOutput" class="col s1"></div>
-        </div>
-        <div class="row">
-            <div class="col s1"></div>
-            <div class="col s10">
-                <div id="output"></div>
-            </div>
-            <div class="col s1"></div>
-        </div>
-    </section>
+    <main>
+        <header>
+            <h1 id="welcomeMessage">Welcome Jesse</h1>
+            <p id="lastLogin">last login: December 1, 2015</p>
+        </header>
+        <section id="stats">
+        </section>
+    </main>
     <!-- scripts and everything else not part of the frame -->
     <!-- jQuery js -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -111,10 +103,13 @@
     </script>
     <!-- Alertify -->
     <script src="assets/javascript/alertify.js"></script>
+    <!-- moment.js javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/locale/af.js"></script>
     <!-- custom javascript -->
     <script type="text/javascript" src="assets/javascript/tools.js"></script>
     <script type="text/javascript" src="assets/javascript/firebase.js"></script>
     <script type="text/javascript" src="assets/javascript/code.js"></script>
+    <script type="text/javascript" src="assets/javascript/host.js"></script>
 </body>
 
 </html>

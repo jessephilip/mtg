@@ -1,13 +1,3 @@
-"use strict";
-
-var deckName = "trial";
-
-var coin = coinFlip();
-var d6 = d6();
-var d10 = d10();
-var d20 = d20();
-var dSpecial = customDie();
-
 // variable to hold sign in info from google sign in
 var googleInfo = {};
 
@@ -148,10 +138,6 @@ function createCard(card) {
     output.append(img);
 }
 
-function diceRoll(func) {
-    alertify.alert(func);
-}
-
 // ========== CLICKLISTENERS ==========
 
 //$(document).on("click", ".card", addCardToDeck);
@@ -183,7 +169,7 @@ function addCardToDeck() {
     alertify.success(cardName + " added.");
 }
 
-function getDeck() {}
+function getDeck() {};
 
 // visual functions
 function createPlayerRow(playerObject) {
@@ -303,4 +289,9 @@ function createDeckCard(deck) {
     p = $("<p>");
     p.text("Here is some more information about this product that is only revealed once clicked on.");
     divCardReveal.append(p);
+}
+
+// startUp Code
+function start() {
+
 }

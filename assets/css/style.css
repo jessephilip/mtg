@@ -1,8 +1,3 @@
-body {
-  background-color: black;
-  color: white;
-}
-
 .container {
   margin-top: 75px;
 }
@@ -57,9 +52,4 @@ body {
 .dice {
   width: 24px;
   height: 24px;
-}
-
-nav {
-  background-image: url("../images/mtgbackground2.jpg");
-  color: black;
 }

@@ -1,9 +1,20 @@
+// Clicklisteners on sidebar
+$("#coinFlip").on("click", coinFlip);
+$("#d6").on("click", d6);
+$("#d20").on("click", d20);
+
+// functions for tools
+
 function coinFlip() {
-	return Math.round(Math.random());
+	var flip = Math.round(Math.random());
+	if (flip === 0) flip = "Heads";
+	else flip = "Tails";
+	Materialize.toast("Coin: " + flip, 4000);
 }
 
 function d6() {
-	return Math.floor(Math.random() * 6) + 1;
+	var roll = Math.floor(Math.random() * 6) + 1;
+	Materialize.toast("D6: " + roll, 4000);
 }
 
 function d10() {
@@ -11,20 +22,10 @@ function d10() {
 }
 
 function d20() {
-	return Math.floor(Math.random() * 20) + 1;
+	var roll = Math.floor(Math.random() * 20) + 1;
+	Materialize.toast("D20: " + roll,4000);
 }
 
 function customDie(num) {
 	return Math.floor(Math.random() * num) + 1;
-}
-
-function createPlayer(name, deck, hp) {
-
-	var player = {
-		name: name,
-		deck: deck,
-		hp: hp
-	}
-
-	return player;
 }

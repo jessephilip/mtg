@@ -5,6 +5,11 @@ var database = firebase.database();
 function logEntry(email) {
     // firebase does not allow any directories to have a period in the string
     var emailFixed = email.replace(".", "");
+
+    // use moment.js to get current time
+    var now = moment();
+    
+
     database.ref(emailFixed + "/").push({
         time: "now"
     });
@@ -28,7 +33,7 @@ connectedRef.on("value", function(snap) {
     // Add user to the connections list.
     var con = connectionsRef.push(true);
 
-    // Remove user from the connection list when they disconnect.
+    // Remove user from the connection list when he or she disconnects.
     con.onDisconnect().remove();
   }
 });

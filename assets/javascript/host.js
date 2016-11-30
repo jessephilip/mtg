@@ -62,6 +62,8 @@ function Player(name, email, image = defaultImg, life = 40, deck, points, poison
     };
 }
 
+$("#joinGame").on("click", createPlayerCollapsible(googleInfo));
+
 // FUNCTIONS: HTML GENERATORS
 function createPlayerCollapsible(playerObject) {
     var playerUL = $("#playerUL");
