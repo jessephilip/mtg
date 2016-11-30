@@ -57,5 +57,9 @@ body {
 .dice {
   width: 24px;
   height: 24px;
-  display: inline;
+}
+
+nav {
+  background-image: url("../images/mtgbackground2.jpg");
+  color: black;
 }

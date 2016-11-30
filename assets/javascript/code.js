@@ -65,7 +65,7 @@ var cardListOutput = $("#cardListOutput");
 var content = $("#content");
 var addPlayer = $("#addPlayer");
 var logo = $("#logo");
-var profileImage = $("#profileImage");
+var profileImage = $(".profileImage");
 var profileName = $("#profileName");
 var profileEmail = $("#profileEmail");
 
