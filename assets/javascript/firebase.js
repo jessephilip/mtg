@@ -1,13 +1,11 @@
 // ---------- GLOBAL VARIABLES ----------
-var user = googleInfo.email;
 
 // ---------- INITIATORS ----------
 var database = firebase.database();
-var userbase = database.ref(user);
 
 // ---------- ACTIONS ----------
-function logEntry() {
-    userbase.push({
+function logEntry(email) {
+    database.ref(email + "/").push({
         time: "now"
     });
 }

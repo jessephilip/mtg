@@ -118,3 +118,10 @@ function createPlayerCollapsible(playerObject) {
     pBody.text("Behind the couch leave dead animals as gifts, and sniff other cat's butt and hang jaw half open thereafter chew iPad power cord asdflkjaertvlkjasntvkjn (sits on keyboard) need to chase tail, so pee in the shoe. Eat and than sleep on your face chew on cable or chirp at birds. Hide from vacuum cleaner mrow or stare at wall turn and meow stare at wall some more meow again continue staring , all of a sudden cat goes crazy chase red laser dot but run outside as soon as door open or licks your face.");
     divBody.append(pBody);
 }
+
+// ============================== PERSONAL USER EXPERIENCE ==============================
+// not previously logged in or logged out. welcome screen. expanding signup/login
+// when player logs on auto sign in if previously signed in
+// auto populate playerObject for game -- pulling in last used deck
+// welcome screen will have stats. win/loss ratio. last story, battle, favorite decks, etc.
+// ============================== PERSONAL USER EXPERIENCE ==============================

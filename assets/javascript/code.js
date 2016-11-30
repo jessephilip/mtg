@@ -49,8 +49,6 @@ var mtgQuery = {
 
 }
 
-// ---------- INITIATORS ----------
-var database = firebase.database();
 $(".button-collapse").sideNav();
 
 // ---------- GLOBAL VARIABLES ----------
@@ -103,6 +101,7 @@ function onSignIn(googleUser) {
   }
 
   setProfileInformation(googleInfo);
+  logEntry(email);
 }
 
 function setProfileInformation(profile) {
