@@ -1,49 +1,7 @@
 // variable to hold sign in info from google sign in
 var googleInfo = {};
 
-// object of ajax queries
-var mtgQuery = {
-    urls: {
-        cardSearch: "https://api.magicthegathering.io/v1/cards?",
-        idSearch: "https://api.magicthegathering.io/v1/cards/"
-    },
-    parameters: {
-        name: "&name=",
-        layout: "&layout=",
-        cmc: "&cmc=",
-        colors: "&colors=",
-        colorIdentity: "&colorIdentity=",
-        type: "&type=",
-        supertypes: "&supertypes=",
-        types: "&types=",
-        subtypes: "&subtypes=",
-        rarity: "&rarity=",
-        set: "&set=",
-        setName: "&setName=",
-        text: "&text=",
-        flavor: "&flavor=",
-        artist: "&artist=",
-        number: "&number=",
-        power: "&power=",
-        toughness: "&toughness=",
-        loyalty: "&loyalty=",
-        foreignName: "&foreignName",
-        language: "&language",
-        gameFormat: "&gameFormat",
-        legality: "&legality=",
-        page: "&page=",
-        pageSize: "&pageSize=",
-        orderBy: "&orderBy="
-
-    }
-
-}
-
 $(".button-collapse").sideNav();
-
-// ---------- GLOBAL VARIABLES ----------
-var searchTerm;
-var arrayOfResults = [];
 
 // ---------- LOCATIONS ----------
 var searchBox = $("#searchBox");
@@ -100,21 +58,6 @@ function setProfileInformation(profile) {
     profileEmail.text(profile.email);
 }
 
-function search() {
-    $.ajax({
-            url: mtgQuery.urls.cardSearch + mtgQuery.parameters.name + searchTerm,
-            type: "GET",
-            dataType: "json",
-        })
-        .done(function (object) {
-            console.log(object);
-            var cards = object.cards;
-            showCardResults(cards);
-
-        });
-
-}
-
 function clearSearchBox() {
     searchBox.val("");
 }
@@ -141,8 +84,6 @@ function createCard(card) {
 // ========== CLICKLISTENERS ==========
 
 //$(document).on("click", ".card", addCardToDeck);
-
-$(".dropdown-button").dropdown();
 
 // ========== DATABASE LISTENER ==========
 
@@ -290,7 +231,14 @@ function createDeckCard(deck) {
     p.text("Here is some more information about this product that is only revealed once clicked on.");
     divCardReveal.append(p);
 }
-
+// Things to do on startUp
+// 1. auto login player
+// 2. update presence
+// 3. initiae firebase
+// 4. initiate sidebar
+// 5. generate welcome screen / main page
+// 6. auto create playerObject from firebase
+// 7. personalize user experience
 // startUp Code
 function start() {
 
