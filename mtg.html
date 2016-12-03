@@ -25,8 +25,8 @@
     <nav id="stickyNavBar" class="transparent">
         <div class="nav-wrapper">
             <a id="logo" class="brand-logo">Magic the Console</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><span id="watchers"><i class="material-icons">visibility</i></li>
+            <ul id="nav-mobile" class="right">
+                <li><span id="watchers"><i class="material-icons">visibility</i></span></li>
                 <li>
                     <img src="http://placehold.it/30x30" alt="profile image" class="circle profileImage">
                 </li>
@@ -38,7 +38,7 @@
         <li>
             <div class="userView">
                 <div class="background">
-                    <img src="assets/images/mtgbackground.jpg">
+                    <img src="assets/images/mtgbackground.jpg" alt="mtg background image">
                 </div>
                 <a href="#!user"><img class="circle profileImage" src="http://placehold.it/50x50" alt="profile image"></a>
                 <a href="#!name"><span id="profileName" class="white-text name">John Doe</span></a>
@@ -77,10 +77,92 @@
     <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
     <!-- main content area -->
     <main>
+        <!-- Comment For Now
         <header>
             <h1 id="welcomeMessage">Welcome Jesse</h1>
             <p id="lastLogin">last login: December 1, 2015</p>
         </header>
+        -->
+        <br>
+        <br>
+        <ul id="lifebars" class="collapsible" data-collapsible="expandable">
+            <li id="jesseLifebar">
+                <div class="collapsible-header"><i class="material-icons playerIcon">perm_identity</i><span class="barName">Jesse</span>
+                    <span class="lifeSection">
+                        <button class="waves-effect waves-light btn lifeButton green" data-name="jesse" data-value="1">+1</button>
+                        <button class="waves-effect waves-light btn lifeButton green" data-name="jesse" data-value="5">+5</button>
+                        <a id="jesseLife" class="lifeNumber">40</a>
+                        <button class="waves-effect waves-light btn lifeButton red" data-name="jesse" data-value="-1">-1</button>
+                        <button class="waves-effect waves-light btn lifeButton red" data-name="jesse" data-value="-5">-5</button>
+                    </span>
+                </div>
+                <div class="collapsible-body">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>  
+            </li>
+            <li id="patrickLifeBar">
+                <div class="collapsible-header"><i class="material-icons playerIcon" data-name="patrick">perm_identity</i><span class="barName">Patrick</span>
+                    <span class="lifeSection">
+                        <button class="waves-effect waves-light btn lifeButton green" data-name="patrick" data-value="1">+1</button>
+                        <button class="waves-effect waves-light btn lifeButton green" data-name="patrick" data-value="5">+5</button>
+                        <a id="patrickLife" class="lifeNumber">40</a>
+                        <button class="waves-effect waves-light btn lifeButton red" data-name="patrick" data-value="-1">-1</button>
+                        <button class="waves-effect waves-light btn lifeButton red" data-name="patrick" data-value="-5">-5</button>
+                    </span>
+                </div>
+                <div class="collapsible-body">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </li>
+            <li id="willLifeBar">
+                <div class="collapsible-header"><i class="material-icons playerIcon"  data-name="will">perm_identity</i><span class="barName">Will</span>
+                    <span class="lifeSection">
+                        <button class="waves-effect waves-light btn lifeButton green" data-name="will" data-value="1">+1</button>
+                        <button class="waves-effect waves-light btn lifeButton green" data-name="will" data-value="5">+5</button>
+                        <a id="willLife" class="lifeNumber">40</a>
+                        <button class="waves-effect waves-light btn lifeButton red" data-name="will" data-value="-1">-1</button>
+                        <button class="waves-effect waves-light btn lifeButton red" data-name="will" data-value="-5">-5</button>
+                    </span>
+                </div>
+                <div class="collapsible-body">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </li>
+            <li id="kevinLIfeBar">
+                <div class="collapsible-header"><i class="material-icons playerIcon" data-name="kevin">perm_identity</i><span class="barName">Kevin</span>
+                    <span class="lifeSection">
+                        <button class="waves-effect waves-light btn lifeButton green" data-name="kevin" data-value="1">+1</button>
+                        <button class="waves-effect waves-light btn lifeButton green" data-name="kevin" data-value="5">+5</button>
+                        <a id="kevinLife" class="lifeNumber">40</a>
+                        <button class="waves-effect waves-light btn lifeButton red" data-name="kevin" data-value="-1">-1</button>
+                        <button class="waves-effect waves-light btn lifeButton red" data-name="kevin" data-value="-5">-5</button>
+                    </span>
+                </div>
+                <div class="collapsible-body">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </li>
+            <li id="cjLifeBar">
+                <div class="collapsible-header"><i class="material-icons playerIcon" data-name="cj">perm_identity</i><span class="barName">CJ</span>
+                    <span class="lifeSection">
+                        <button class="waves-effect waves-light btn lifeButton green" data-name="cj" data-value="1">+1</button>
+                        <button class="waves-effect waves-light btn lifeButton green" data-name="cj" data-value="5">+5</button>
+                        <a id="cjLife" class="lifeNumber">40</a>
+                        <button class="waves-effect waves-light btn lifeButton red" data-name="cj" data-value="-1">-1</button>
+                        <button class="waves-effect waves-light btn lifeButton red" data-name="cj" data-value="-5">-5</button>
+                    </span>
+                </div>
+                <div class="collapsible-body">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </li>
+        </ul>
+
+        <aside id="log" class="z-depth-2">
+            <p>History</p>
+            <hr>
+            <div id="historyContent"></div>
+        </aside>
         <section id="stats">
         </section>
     </main>
@@ -109,6 +191,7 @@
     <script type="text/javascript" src="assets/javascript/tools.js"></script>
     <script type="text/javascript" src="assets/javascript/firebase.js"></script>
     <script type="text/javascript" src="assets/javascript/code.js"></script>
+    <script type="text/javascript" src="assets/javascript/lifebars.js"></script>
     <script type="text/javascript" src="assets/javascript/host.js"></script>
 </body>
 

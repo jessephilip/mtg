@@ -3,14 +3,17 @@
 }
 
 html {
+  overflow-y: scroll;
   background: url("../images/mtgbackground3.jpg") no-repeat center center fixed;
-    -webkit-background-size: cover;
+  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
+
 /* Grow */
+
 .hvr-grow {
   display: inline-block;
   vertical-align: middle;
@@ -22,7 +25,10 @@ html {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+
+.hvr-grow:hover,
+.hvr-grow:focus,
+.hvr-grow:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
@@ -57,7 +63,50 @@ html {
   padding: 0;
 }
 
+.collapsible-body {
+  background: white;
+}
+
 .dice {
   width: 24px;
   height: 24px;
+}
+
+#lifebars {
+  width: 50%;
+  margin: 0 5%;
+}
+
+.lifeSection {
+  margin: 0 50px;
+}
+
+.lifeNumber {
+  width: 35px;
+  display: inline-block;
+  text-align: center;
+}
+
+.barName {
+  width: 50px;
+  display: inline-block;
+}
+
+#log {
+  width: 20%;
+  height: 80%;
+  right: 20px;
+  top: 75px;
+  position: absolute;
+  background-color: white;
+}
+
+aside p {
+  text-align: center;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }

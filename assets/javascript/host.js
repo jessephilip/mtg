@@ -67,13 +67,13 @@ $("#joinGame").on("click", createPlayerCollapsible(googleInfo));
 // FUNCTIONS: HTML GENERATORS
 function createPlayerCollapsible(playerObject) {
     var playerUL = $("#playerUL");
-    var name = player.name;
-    var email = player.email;
-    var image = player.image;
-    var life = player.life;
-    var deck = player.deck;
-    var points = player.points;
-    var poison = player.poison;
+    var name = playerObject.name;
+    var email = playerObject.email;
+    var image = playerObject.image;
+    var life = playerObject.life;
+    var deck = playerObject.deck;
+    var points = playerObject.points;
+    var poison = playerObject.poison;
 
     // create line item
     var li = $("<li>");
