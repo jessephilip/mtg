@@ -1,0 +1,25 @@
+USE mtg_db;
+CREATE TABLE users (
+	id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	givenName VARCHAR(100) NOT NULL,
+	familyName VARCHAR(100) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	photo VARCHAR(255),
+	onlineStatus BOOLEAN,
+	points INTEGER,
+	lastLogin TIMESTAMP,
+	userCreated TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE games (
+	id INTEGER PRIMARY KEY NOT NULL AUTO_INCREMENT,
+	gameName VARCHAR(100),
+	gamePlayers VARCHAR(255),
+	gameStatus VARCHAR(100),
+	gameLife VARCHAR(10),
+	gameNumberPlayers INTEGER,
+	gameFormat VARCHAR(100) NOT NULL,
+	gamePlaneschase BOOLEAN DEFAULT false,
+	gameArchenemy BOOLEAN DEFAULT false,
+	createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
